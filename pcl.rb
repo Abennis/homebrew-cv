@@ -31,16 +31,20 @@ class CudaRequirement < Requirement
 end
 
 class Pcl < Formula
-  homepage 'http://www.pointclouds.org/'
-
-  head 'https://github.com/PointCloudLibrary/pcl.git'
+  url 'http://dev.pointclouds.org/attachments/download/610/PCL-1.4.0-Source.tar.bz2'
+  homepage 'http://www.pointclouds.org'
+  md5 '63fd633a6306ae9b334131b250a2f893' 
+  version '1.4' 
+  head 'svn+ssh://svn@svn.pointclouds.org/pcl/trunk' 
 
   option 'with-examples', 'Build pcl examples.'
   option 'with-tests', 'Build pcl tests.'
-  option 'without-tools', 'Build without tools.'
-  option 'without-apps', 'Build without apps.'
-  option 'without-qvtk', 'Build without qvtk support.'
+  option 'with-tools', 'Build without tools.'
+  option 'with-apps', 'Build without apps.'
+  option 'with-qvtk', 'Build without qvtk support.'
   option 'with-docs', 'Build with docs.'
+  option 'with-vtk', 'Build with docs.'
+
 
   depends_on 'cmake' => :build
   depends_on 'pkg-config' => :build
